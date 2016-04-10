@@ -4,7 +4,14 @@ body
     color: #ff23eb;
 }
 
-/*  */
+header {
+    position: relative;
+    left: 20px;
+}
+
+/* Desktop view */
+/*  each of the 3 sections should take up equal amount of space on the screen (% width and float) */
+
 @media only screen and (min-width: 992px) {
 body
 {
@@ -19,7 +26,10 @@ p
 }
 }
 
-/*  */
+/* Tablet view */
+/*the first 2 sections should be in the first row and be of equal size. The 3rd section should 
+be in the second row and take up the entire row by itself. */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 body
 {
@@ -35,7 +45,9 @@ p
 }
 
 
-/*  */
+/* Mobilephone view */
+/* each section should take up the entire row */
+
 @media only screen and (max-width: 767px) {
 body
 {
