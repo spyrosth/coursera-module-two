@@ -1,70 +1,95 @@
+/* Base style */
+
+* {
+box-sizing: border-box;
+}
+
+.row {
+	width: 100%;
+}
+
 body
 {
-    font-family: helvetica, arial, sans-serif;
-    color: #ff23eb;
+    font-family: helvetica, sans-serif;
+}
+
+h1 {
+	text-align:center; 
+	font-size:200%;
+	color: #ff23eb;
 }
 
 header {
-    position: relative;
-    right: -20px;
+	font-size: 150%;
+	float: right;
+	border: 1px solid black;
+	padding: 5px;
+	margin: 5px;
 }
 
-.beef div{  
-border:2px solid black;  
-background-color:yellow;  
-font-color:red;  
+p {
+clear: right;
+}
+
+#feta, #tzatziki, #sushi {  
+border:1px solid black;  
+color:black;  
+background-color: grey;
+text-align: justify;
 }  
+
+#feta > header {
+background-color: yellow;  
+}
+
+#tzatziki > header {
+background-color: lime;  
+}
+
+#sushi > header {
+background-color: pink;  
+}
 
 /* Desktop view */
 /*  each of the 3 sections should take up equal amount of space on the screen (% width and float) */
 
 @media only screen and (min-width: 992px) {
-body
-{
-    font-size: 6em;
-}
 
-p
-{
-	font-size: 4em;
-    margin: 20;
-    padding: 20;
-}
+#sushi, #tzatziki, #feta 
+	{
+		width: 33%;
+		float: left;
+		padding: 5px;
+		margin: 1px;
+	}
 }
 
 /* Tablet view */
-/*the first 2 sections should be in the first row and be of equal size. The 3rd section should 
-be in the second row and take up the entire row by itself. */
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-body
-{
-    font-size: 4em;
-}
 
-p
-{
-	font-size: 2em;
-    margin: 10;
-    padding: 10;
-}
-}
+#feta, #tzatziki
+	{
+		width: 50%;
+		float: left;
+		padding: 5px;
+		margin: 0px;
+		margin-bottom: 20px;
+	}
 
+#sushi 
+	{  
+		width: 100%;
+		clear: left;
+		margin-bottom: 30px;
+	}
+}
 
 /* Mobilephone view */
-/* each section should take up the entire row */
-
 @media only screen and (max-width: 767px) {
-body
-{
-    font-size: 1em;
+	div
+	{
+		width: 100%;
+		padding: 5px;
+		margin-bottom: 20px;		
+	}
 }
-
-p
-{
-	font-size: .5em;
-    margin: 0;
-    padding: 0;
-}
-}
-
